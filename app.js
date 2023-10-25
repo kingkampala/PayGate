@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 const DB_URL = process.env.MONGO_URL;
 
+const paymentRoutes = require('./routes/payment');
+
+app.use(`/payment`, paymentRoutes);
+
 paypal.configure({
   mode: 'sandbox',
   client_id: process.env.PAYPAL_CLIENT_ID,

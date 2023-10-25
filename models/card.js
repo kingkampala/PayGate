@@ -17,7 +17,7 @@ const cardSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    cvv2: {
+    cvv: {
         type: String,
         required: true
     },
